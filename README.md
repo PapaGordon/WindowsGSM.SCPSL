@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Raziel7893/WindowsGSM/releases/tag/v1.25.1.22"><img src="https://img.shields.io/badge/WindowsGSM-Raziel%20v1.25.1.22-38CDD4" alt="Raziel WindowsGSM v1.25.1.22"></a>
+  <a href="https://github.com/Raziel7893/WindowsGSM/releases/tag/v1.25.2.1"><img src="https://img.shields.io/badge/WindowsGSM-Raziel%20v1.25.2.1-38CDD4" alt="Raziel WindowsGSM v1.25.2.1"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-C91F37" alt="Version 0.1.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
 </p>
@@ -51,7 +51,7 @@ This plugin installs, updates, starts and stops the official SCP: Secret Laborat
 
 ## Requirements
 
-- Raziel7893/WindowsGSM v1.25.1.22 or a compatible WindowsGSM build
+- Raziel7893/WindowsGSM v1.25.2.1 or a compatible WindowsGSM build
 - 64-bit Windows supported by the installed SCP:SL Dedicated Server build
 - Microsoft .NET Framework 4.8 and the current Visual C++ Redistributable required by SCP:SL
 - Administrator rights for WindowsGSM when the MeFriendos firewall hardening needs to remove broad application exceptions
@@ -190,7 +190,7 @@ Before applying for Northwood verification, configure at minimum the public serv
 - SCP:SL technical wiki: https://techwiki.scpslgame.com/
 - LocalAdmin V2: https://github.com/northwood-studios/LocalAdmin-V2
 - LabAPI: https://github.com/northwood-studios/LabAPI
-- WindowsGSM: https://github.com/Raziel7893/WindowsGSM
+- WindowsGSM: https://github.com/Raziel7893/WindowsGSM/releases/tag/v1.25.2.1
 - Community: https://mefriendos.de
 
 This is an independent community plugin. It is not affiliated with or endorsed by Northwood Studios, SCP: Secret Laboratory, WindowsGSM, Oscar Hurst, or any third-party plugin developer.
