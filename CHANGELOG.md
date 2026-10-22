@@ -2,6 +2,11 @@
 
 All notable changes to the MeFriendos build are documented here.
 
+## 0.1.1 - 2026-10-22
+
+- Removed plugin firewall cleanup and its startup block. Firewall management now follows WindowsGSM's per-server Auto Firewall setting.
+- Updated setup and firewall notes for WindowsGSM builds with Auto Firewall.
+
 ## 0.1.0 - 2026-09-11
 
 ### Added

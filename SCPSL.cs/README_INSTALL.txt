@@ -1,5 +1,5 @@
 WindowsGSM.SCPSL - MeFriendos build
-Version 0.1.0
+Version 0.1.1
 
 INSTALL
 =======
@@ -26,9 +26,17 @@ INSTALL
    Main file:
    config_gameplay.txt
 
-7. For a public server, create a narrow firewall rule for the selected UDP port only.
+7. For manual port rules, turn Auto Firewall off in WindowsGSM and create a narrow rule for the selected UDP port.
    Default: 7777/UDP
    Do not create a broad application allow rule for LocalAdmin.exe or SCPSL.exe.
+
+FIREWALL
+========
+Firewall management follows WindowsGSM's per-server Auto Firewall setting.
+The plugin does not create, remove or inspect firewall rules and does not block startup for a plugin firewall check.
+
+Use a WindowsGSM build with Auto Firewall, such as https://github.com/PapaGordon/WindowsGSM.
+For manual port rules, turn Auto Firewall off for this server in WindowsGSM and configure the required ports yourself. Router forwarding remains separate.
 
 NOTES
 =====

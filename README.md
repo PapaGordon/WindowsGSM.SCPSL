@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Raziel7893/WindowsGSM/releases/tag/v1.25.2.1"><img src="https://img.shields.io/badge/WindowsGSM-Raziel%20v1.25.2.1-38CDD4" alt="Raziel WindowsGSM v1.25.2.1"></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-C91F37" alt="Version 0.1.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.1-C91F37" alt="Version 0.1.1"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
 </p>
 
@@ -27,7 +27,7 @@ This plugin installs, updates, starts and stops the official SCP: Secret Laborat
 - Supports WindowsGSM Embedded Console with LocalAdmin V2.
 - Adds `--printStd`, `--noSetCursor` and `--disableTrueColor` automatically while Embedded Console is enabled.
 - Sends the official LocalAdmin `exit` command for graceful shutdown before falling back to a forced kill.
-- Removes unrestricted Windows Firewall application exceptions for the exact `LocalAdmin.exe` and `SCPSL.exe` paths before startup.
+- Leaves firewall management to WindowsGSM's per-server **Auto Firewall** setting.
 - Leaves narrow manually configured UDP port rules untouched.
 - Does **not** automatically accept Northwood's EULA.
 - Does **not** automate SCP:SL server verification or Community Server Guideline acceptance.
@@ -47,14 +47,13 @@ This plugin installs, updates, starts and stops the official SCP: Secret Laborat
 | Query method | None in WindowsGSM |
 | Embedded Console | Supported through LocalAdmin V2 |
 | Mod framework | LabAPI bundled by Northwood |
-| Firewall | Manual UDP port rules only |
+| Firewall | WindowsGSM Auto Firewall or manual port rules |
 
 ## Requirements
 
-- Raziel7893/WindowsGSM v1.25.2.1 or a compatible WindowsGSM build
+- A compatible WindowsGSM build with per-server **Auto Firewall**, such as [our WindowsGSM build](https://github.com/PapaGordon/WindowsGSM)
 - 64-bit Windows supported by the installed SCP:SL Dedicated Server build
 - Microsoft .NET Framework 4.8 and the current Visual C++ Redistributable required by SCP:SL
-- Administrator rights for WindowsGSM when the MeFriendos firewall hardening needs to remove broad application exceptions
 
 Northwood's public hosting guide currently lists Windows 8.1/10 and notes that Windows 11 is not officially supported but should work. Windows Server editions are not explicitly listed there, so server-host compatibility should be verified in your environment.
 
@@ -110,14 +109,9 @@ Default:
 
 For the MeFriendos firewall policy, create a narrow inbound rule for the chosen UDP port only.
 
-The plugin removes broad Windows Firewall application exceptions for the exact paths of:
+Firewall management follows WindowsGSM's per-server **Auto Firewall** setting. This plugin does not create, remove or inspect firewall rules and does not block startup for a plugin firewall check.
 
-```text
-LocalAdmin.exe
-SCPSL.exe
-```
-
-If removal cannot be completed or verified, startup is stopped instead of silently continuing with unrestricted application access. Existing targeted port rules are not touched.
+Use a WindowsGSM build with **Auto Firewall**, such as our [WindowsGSM build](https://github.com/PapaGordon/WindowsGSM). For the MeFriendos setup with manual port rules, turn **Auto Firewall** off for this server in WindowsGSM and configure the required ports yourself. Router forwarding remains separate.
 
 ## Embedded Console
 
@@ -179,7 +173,7 @@ Before applying for Northwood verification, configure at minimum the public serv
 - With Embed Console enabled, LocalAdmin output is visible in WindowsGSM.
 - With Embed Console enabled, the server process stdout/stderr is surfaced through `--printStd`.
 - Stop sends `exit` before any forced termination.
-- No broad LocalAdmin.exe or SCPSL.exe application firewall exception remains after startup.
+- Auto Firewall on/off is controlled by WindowsGSM and is not overridden by the plugin.
 - A narrow manual `<port>/UDP` firewall rule remains untouched.
 - SCP:SL creates/uses its per-port configuration under `%APPDATA%\SCP Secret Laboratory\config\<port>\`.
 
