@@ -35,7 +35,8 @@ FIREWALL
 Firewall management follows WindowsGSM's per-server Auto Firewall setting.
 The plugin does not create, remove or inspect firewall rules and does not block startup for a plugin firewall check.
 
-Use a WindowsGSM build with Auto Firewall, such as https://github.com/PapaGordon/WindowsGSM.
+Use MeFriendos WindowsGSM v1.25.3.0 with Auto Firewall:
+https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0
 For manual port rules, turn Auto Firewall off for this server in WindowsGSM and configure the required ports yourself. Router forwarding remains separate.
 
 NOTES
