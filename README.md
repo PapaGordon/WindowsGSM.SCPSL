@@ -9,12 +9,21 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0"><img src="https://img.shields.io/badge/WindowsGSM-MeFriendos%20v1.25.3.0-38CDD4" alt="MeFriendos WindowsGSM v1.25.3.0"></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.1-C91F37" alt="Version 0.1.1"></a>
+  <a href="https://github.com/PapaGordon/WindowsGSM/releases/latest"><img src="https://img.shields.io/badge/WindowsGSM-MeFriendos%20latest-38CDD4" alt="Latest MeFriendos WindowsGSM"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.2-C91F37" alt="Version 0.1.2"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
 </p>
 
 This plugin installs, updates, starts and stops the official SCP: Secret Laboratory Dedicated Server through SteamCMD and Northwood's LocalAdmin V2. The MeFriendos build is based on the original `WindowsGSM.SCPSL` plugin by Oscar Hurst, but the runtime handling has been rewritten for current LocalAdmin V2 behavior and the hardened MeFriendos WindowsGSM setup.
+
+
+## WindowsGSM and Steam login
+
+Use the [latest MeFriendos WindowsGSM release](https://github.com/PapaGordon/WindowsGSM/releases/latest). This server is already built into that fork, so select its normal built-in entry there. The standalone plugin remains available for other compatible WindowsGSM builds.
+
+This dedicated server uses anonymous SteamCMD downloads. It does not read or require your Steam password, so encrypted account credentials do not change its installation or updates.
+
+The plugin leaves firewall management to the host. On other WindowsGSM builds, configure game/query port rules manually if the host does not manage them. Router forwarding is separate.
 
 ## Features
 
@@ -51,13 +60,13 @@ This plugin installs, updates, starts and stops the official SCP: Secret Laborat
 
 ## Requirements
 
-MeFriendos uses this plugin with [WindowsGSM v1.25.3.0](https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0). The Windows x64 download includes the .NET runtime.
+MeFriendos uses this plugin with [WindowsGSM (latest release)](https://github.com/PapaGordon/WindowsGSM/releases/latest). The Windows x64 download includes the .NET runtime.
 
-- [MeFriendos WindowsGSM v1.25.3.0](https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0) with per-server **Auto Firewall**
+- [MeFriendos WindowsGSM (latest release)](https://github.com/PapaGordon/WindowsGSM/releases/latest) with per-server **Auto Firewall**
 - 64-bit Windows supported by the installed SCP:SL Dedicated Server build
 - Microsoft .NET Framework 4.8 and the current Visual C++ Redistributable required by SCP:SL
 
-Northwood's public hosting guide currently lists Windows 8.1/10 and notes that Windows 11 is not officially supported but should work. Windows Server editions are not explicitly listed there, so server-host compatibility should be verified in your environment.
+Check Northwood's current hosting guide for supported Windows versions and runtime requirements before deploying a server.
 
 ## Plugin installation
 
@@ -113,7 +122,7 @@ For the MeFriendos firewall policy, create a narrow inbound rule for the chosen 
 
 Firewall management follows WindowsGSM's per-server **Auto Firewall** setting. This plugin does not create, remove or inspect firewall rules and does not block startup for a plugin firewall check.
 
-Use [MeFriendos WindowsGSM v1.25.3.0](https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0) with **Auto Firewall**. For the MeFriendos setup with manual port rules, turn **Auto Firewall** off for this server in WindowsGSM and configure the required ports yourself. Router forwarding remains separate.
+Use [MeFriendos WindowsGSM (latest release)](https://github.com/PapaGordon/WindowsGSM/releases/latest) with **Auto Firewall**. For the MeFriendos setup with manual port rules, turn **Auto Firewall** off for this server in WindowsGSM and configure the required ports yourself. Router forwarding remains separate.
 
 ## Embedded Console
 
@@ -181,12 +190,12 @@ Before applying for Northwood verification, configure at minimum the public serv
 
 ## Project links
 
-- Source: https://github.com/PapaGordon/WindowsGSM.SCPSL-MeFriendos
+- Source: https://github.com/PapaGordon/WindowsGSM.SCPSL
 - Original WindowsGSM plugin: https://github.com/Voidoz/WindowsGSM.SCPSL
 - SCP:SL technical wiki: https://techwiki.scpslgame.com/
 - LocalAdmin V2: https://github.com/northwood-studios/LocalAdmin-V2
 - LabAPI: https://github.com/northwood-studios/LabAPI
-- WindowsGSM: [MeFriendos v1.25.3.0](https://github.com/PapaGordon/WindowsGSM/releases/tag/v1.25.3.0)
+- WindowsGSM: [MeFriendos latest release](https://github.com/PapaGordon/WindowsGSM/releases/latest)
 - Community: https://mefriendos.de
 
 This is an independent community plugin. It is not affiliated with or endorsed by Northwood Studios, SCP: Secret Laboratory, WindowsGSM, Oscar Hurst, or any third-party plugin developer.

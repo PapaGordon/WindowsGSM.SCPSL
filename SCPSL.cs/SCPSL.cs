@@ -19,8 +19,8 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.SCPSL",
             author = "MeFriendos",
             description = "WindowsGSM plugin for SCP: Secret Laboratory Dedicated Server (MeFriendos build)",
-            version = "0.1.1",
-            url = "https://github.com/PapaGordon/WindowsGSM.SCPSL-MeFriendos",
+            version = "0.1.2",
+            url = "https://github.com/PapaGordon/WindowsGSM.SCPSL",
             color = "#C91F37"
         };
 
