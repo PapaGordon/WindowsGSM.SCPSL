@@ -1,0 +1,5 @@
+SCP: Secret Laboratory artwork: Northwood Studios and the respective rights holders.
+Source: https://shared.akamai.steamstatic.com/community_assets/images/apps/700330/c61fb24a5e0d348a922ec6b5ea1095c9bcf7ecd0.jpg
+
+Original Steam game icon, converted losslessly from JPEG to PNG for game identification.
+Artwork and trademarks remain with their respective rights holders and are not covered by the plugin code's MIT license. No affiliation or endorsement is implied.

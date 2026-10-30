@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Uses the original SCP: Secret Laboratory game icon.
+
+
 ## 0.1.2 - 2026-10-29
 
 
